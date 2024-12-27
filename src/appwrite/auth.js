@@ -1,4 +1,4 @@
-import {config} from '../config';
+import config from '../config/config';
 import {Client,Account,ID} from 'appwrite'
 
 
@@ -36,7 +36,7 @@ export class AuthService {
 
     async getCurrentUser(){
         try {
-            return await this.getCurrentUser.get();
+            return await this.account.get();
         } catch (error) {
             throw error
         }
